@@ -7,10 +7,10 @@
 //
 
 #import <InterfaceBuilderKit/InterfaceBuilderKit.h>
-#import <MapKit/MKMapView.h>
+#import <MapKit/YFTMKMapView.h>
 #import "MKMapViewAttributeInspector.h"
 
-@implementation MKMapView ( MapKitPlugin )
+@implementation YFTMKMapView ( MapKitPlugin )
 
 - (void)ibPopulateKeyPaths:(NSMutableDictionary *)keyPaths {
     [super ibPopulateKeyPaths:keyPaths];

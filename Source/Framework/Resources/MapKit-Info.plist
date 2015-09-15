@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIdentifier</key>
-	<string>ca.centrix.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>ca.centrix.$(PRODUCT_NAME:rfc1034identifier)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>
@@ -18,5 +18,11 @@
 	<string>CTRX</string>
 	<key>CFBundleVersion</key>
 	<string>0.8</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<!--Include to allow all connections (DANGER)-->
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

@@ -7,13 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <MapKit/MapKit.h>
+#import <YFTMapKit/YFTMapKit.h>
 
-@class MKMapView;
+@class YFTMKMapView;
 
-@interface DemoAppApplicationDelegate : NSObject <NSApplicationDelegate, MKMapViewDelegate, MKReverseGeocoderDelegate, MKGeocoderDelegate> {
-    NSWindow *window;
-    IBOutlet MKMapView *mapView;
+@interface DemoAppApplicationDelegate : NSObject <NSApplicationDelegate, MKMapViewDelegate, YFTMKReverseGeocoderDelegate, YFTMKGeocoderDelegate> {
+    NSWindow *__strong window;
+    IBOutlet YFTMKMapView *mapView;
     IBOutlet NSTextField *addressTextField;
     NSNumber *circleRadius;
     NSString *pinTitle;
@@ -22,8 +22,8 @@
     NSMutableArray *coreLocationPins;
 }
 
-@property (assign) IBOutlet NSWindow *window;
-@property (retain) NSString *pinTitle;
+@property (strong) IBOutlet NSWindow *window;
+@property (strong) NSString *pinTitle;
 
 - (IBAction)setMapType:(id)sender;
 - (IBAction)addCircle:(id)sender;
